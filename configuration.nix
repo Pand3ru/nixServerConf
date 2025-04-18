@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-
   imports = [
     ./infra
   ];
@@ -10,6 +9,8 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  time.timeZone = "Europe/Berlin";
 
   users.mutableUsers = false;
 
@@ -27,6 +28,8 @@
   users.groups.panderu = {};
 
   networking = rec {
+    networkmanager.enable = true;
+
     hostName = "homelab";
     domain = "panderu.org";
 
