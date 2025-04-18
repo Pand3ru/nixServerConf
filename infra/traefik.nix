@@ -4,11 +4,11 @@
 
     staticConfigOptions = {
       log = {
-        level = "WARN";
+        level = "DEBUG";
       };
 
       certificateResolvers = {
-        letsEncrypt = {
+        le = {
           acme = {
             email = "p_konsti@outlook.de";
 	    storage = "/var/lib/traefik/acme.json";
@@ -50,14 +50,6 @@
               stsPreload = true;
               stsSeconds = 15552000;
             };
-          };
-        };
-        routers = {
-	  http-catchall = {
-            rule = "HostRegexp(`{any:.+}`)";
-            entrypoints = [ "web" ];
-            middlewares = [ "redirect-to-https" ];
-	    service = "noop@internal";
           };
         };
       };

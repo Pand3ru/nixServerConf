@@ -20,10 +20,9 @@
     hashedPassword = "$y$j9T$gpkw3n5FtuAbk98WCT0wF.$yOrg5Ss0udqpLDb3bU04o1Iw7SSHjkVYFjPJrRldnG6";
   };
 
-  users.users."user".openssh.authorizedKeys.keys = [
+  users.users."panderu".openssh.authorizedKeys.keys = [
   "sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIBPfW+XOeE2uRMcya7v67oisrcfI37/86ttBHNzmhPXJAAAABHNzaDo= Panderu"
   ];
-
 
   users.groups.panderu = {};
 

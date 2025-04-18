@@ -6,15 +6,21 @@
       "slash_data:/var/opt/slash"
     ];
   };
-  # Traefik configuration specific to littlelink
+
   services.traefik.dynamicConfigOptions.http = {
+    services.slash.loadBalancer.servers = [
+      {
+        url = "http://localhost:3010/";
+      }
+    ];
+
     routers.slash = {
       rule = "Host(`pankratov.de`)";
       tls = {
-        certResolver = "letsEncrypt";
+        certResolver = "le";
       };
       service = "slash";
-      entrypoints = "websecure";
+      entrypoints = [ "websecure" ];
     };
   };
 }
