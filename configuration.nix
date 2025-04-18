@@ -17,7 +17,7 @@
     isNormalUser = true;
     group = "panderu";
     extraGroups = [ "wheel" ];
-    hashedPassword = "$y$j9T$gpkw3n5FtuAbk98WCT0wF.$yOrg5Ss0udqpLDb3bU04o1Iw7SSHjkVYFjPJrRldnG6";
+    hashedPassword = "$y$j9T$ngIBPzh2cpa/lr6SsZbeL.$a7GQhL7sto/lf54.MTjvhs2NFbI6ksBxRxCl3yPhK69";
   };
 
   users.users."panderu".openssh.authorizedKeys.keys = [

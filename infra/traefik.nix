@@ -7,7 +7,7 @@
         level = "DEBUG";
       };
 
-      certificateResolvers = {
+      certificatesResolvers = {
         le = {
           acme = {
             email = "p_konsti@outlook.de";
