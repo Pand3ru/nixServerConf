@@ -52,6 +52,7 @@
     neovim
     wget
     tree
+    iwd
   ];
 
   system.stateVersion = "24.11";
