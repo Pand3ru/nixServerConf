@@ -7,7 +7,17 @@
         level = "WARN";
       };
 
-      api = {}; 
+      certificateResolvers = {
+        letsEncrypt = {
+          acme = {
+            email = "p_konsti@outlook.de";
+	    storage = "/var/lib/traefik/acme.json";
+	    httpChallenge = {
+              entryPoint = "web";
+	    };
+	  };
+	};
+      };
 
       entryPoints = {
         web = {
